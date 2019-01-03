@@ -15,11 +15,9 @@ end
 
 end
 def show
+@chef = Chef.find(params[:id])
+end
 
-end
-def index
-@chef =Chef.new(chef_params)
-end
 private
  def chef_params
 params.require(:chef).permit(:name, :email, :password, :password_confirmation)
