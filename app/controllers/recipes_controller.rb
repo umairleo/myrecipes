@@ -32,11 +32,12 @@ redirect_to recipe_path(@recipe)
 else
 render 'edit'
 end
+end
 def destroy
 Recipe.find(params[:id]).destroy
 flash[:success]= "Recipe deleted Successfully"
 redirect_to recipes_path
-end
+
 end
 private
 def set_recipe
