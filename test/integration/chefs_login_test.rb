@@ -15,7 +15,6 @@ assert_select" a[href=?]",login_path
 assert_select" a[href=?]",logout_path, count: 0
 get root_path
 assert_not flash.empty?
-
 end
 
 test"valid login credentials accepted and begin sessions"do
